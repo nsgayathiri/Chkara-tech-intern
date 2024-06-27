@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ecommerce CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: rgb(229, 228, 228);
+        }
+
+        #heading {
+            padding-left: 80px;
+            margin: 40px;
+        }
+
+        #container {
+            width: 90%;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+        }
+
+        .product {
+            border: 2px groove #d0cdcd;
+            padding: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .Brocolli,
+        .Red_Capsicum,
+        .Organic_Fresh_Banana,
+        .Gala_Apple,
+        .Valencia_Orange,
+        .Organic_Avocados {
+            border-bottom: none;
+        }
+
+        img {
+            float: left;
+            width: 90px;
+            height: 100px;
+        } 
+        button#AddtoCart,
+        button#Edit,
+        button#Delete 
+        {
+            position: absolute;
+            right: 0;
+            width: 15%;
+            margin-top: 30px;
+            margin-right:40px;
+            padding: 10px;
+            color: rgb(52, 120, 157);
+            background: #ece8e8;
+            border: none;
+        }
+        button#AddtoCart:hover,
+        button#Edit:hover,
+        button#Delete:hover{
+            background: rgb(18, 125, 161);
+            color: white;
+        } 
+
+        button#AddtoCart {
+            top: 0;
+        }
+
+        button#Edit {
+            top: 50px; 
+        }
+
+        button#Delete {
+            top: 100px; 
+        }
+        .content
+        {
+
+            margin-left: 160px;
+            margin-top: 0px;
+        }
+
+        h4#Name,
+        h6#weight {
+            margin: 0;
+            padding: 0;
+        }
+
+        h4#Name {
+            padding-top: 30px;
+        }
+
+        h6#weight {
+            padding-top: 5px;
+        }
+
+        h5#price {
+            margin: 0;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        .dropdown {
+            display: none;
+            clear: both;
+            margin-top: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .product:hover .dropdown {
+            display: block;
+        }
+
+        .Country {
+            padding-left: 160px;
+            display: inline-block;
+        }
+
+        .keyInfo {
+            padding-left: 160px;
+            display: inline-block;
+            margin: 0;
+        }
+        .price_details h5,.price_details h6,.product_details h5,
+        .product_details h6,.stock h6,.stock h5
+        {
+            padding-left: 160px;
+            display: block;
+            margin: 0;
+        }
+
+        .Country h5,.Country h6,.about h6,.about h5,.keyInfo h5,
+        .keyInfo h6,.price_details h5,.price_details h6,.product_details h5,
+        .product_details h6,.stock h6
+        {
+            margin: 7px;
+        }
+
+        .about {
+            padding-left: 160px;
+        }
+
+        hr {
+            margin-left: 160px;
+        }
+
+        #addnewitem {
+            float: right;
+            margin-right: 36px;
+            padding: 15px;
+            width: 200px;
+            font-size: large;
+            background: rgb(102, 154, 227);
+            color: white;
+        }
+
+        #form_heading {
+            margin-top: 0px;
+            background: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        #product-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgb(245, 241, 241);
+            padding: 0px;
+            border: 1px solid black;
+            max-height: 100%;
+            overflow-y: auto;
+            z-index: 2;
+        }
+
+        #product-form b {
+            justify-content: center;
+            text-align: center;
+        }
+        #productCategory
+        {
+            display: block;
+            margin: 7px;
+            padding: 10px;
+            width: 320px;
+            border: 2px solid #d9d0d0;
+            border-radius: 5px;
+            color:#848383;
+        }
+        .blur-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+            backdrop-filter: blur(10px); 
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+}
+        #unit{
+            width: 130px;
+            display: block;
+            margin: 10px;
+            margin-right: 0px;
+            padding-left: 10px;
+            border: 2px solid #d9d0d0;
+            border-radius: 5px;
+            color:#848383;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            display: block;
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #d9d0d0;
+            border-radius: 5px;
+        }
+        
+        .twoinrow {
+            display: flex;
+            width: 150px;
+        }
+
+        .twoinrow input {
+            width: 130px;
+        }
+
+        #photo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #photo img {
+            width: 90px;
+            height: 90px;
+            border: 2px solid #c9c7c7;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            color: white;
+            background: rgb(83, 83, 206);
+            border-radius: 8px;
+            cursor: pointer;
+            display: block;
+            margin: 20px;
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #d9d0d0;
+            margin-top: 0px;
+        }
+
+        #blur-background section 
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="heading">
+        <h2>Fresh Produce</h2>
+        <h5 style="color: rgb(102, 102, 102);">14 Products</h5>
+        <b><button id="addnewitem">New Product</button></b>
+        <br>
+    </header>
+    <div id="container">
+        <section id="product-list">
+            <div class="product Brocolli">
+                <img src="broccoli.webp" width="150px" height="140px">
+                <div class="content">
+                        <button id="AddtoCart"><b>ADD TO CART</b></button>
+                        <button id="Edit"><b>EDIT</b></button>
+                        <button id="Delete"><b>DELETE</b></button>
+                    <div class="details">
+                        <h4 id="Name">Brocolli</h4>
+                        <h6 id="weight"><b style="color: rgb(102, 102, 102);">300g</b></h6>
+                        <h5 id="price"><b>$2.30</b></h5>
+                        <h5 id="discount">Discount:5%</h5>
+                        <h5 id="brand">Brand:</h5>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <hr>
+                    <div class="keyInfo">
+                        <h6 style="color: rgb(102, 102, 102);">Key Information</h6>
+                        <h5>Best Consumed within 6 days of delivery</h5>
+                    </div>
+                    <div class="Country">
+                        <h6 style="color: rgb(102, 102, 102);">Country of Origin</h6>
+                        <h5>Australia</h5>
+                    </div>
+                    <hr>
+
+                    <div class="price_details">
+                        <h6 style="color: rgb(102, 102, 102);">Wholesale Price</h6>
+                        <h5>$1.50</h5>
+
+                        <h6 style="color: rgb(102, 102, 102);">Dealer Price</h6>
+                        <h5>$1.00</h5>
+                    </div>
+                    <hr>
+                    <div class="product_details">
+                        <h6 style="color: rgb(102, 102, 102);">Product code</h6>
+                        <h5>A01</h5>
+
+                        <h6 style="color: rgb(102, 102, 102);">Product Category</h6>
+                        <h5>Fruits</h5>
+                    </div>
+                    <hr>
+                    <div class="stock">
+                        <h6 style="color: rgb(102, 102, 102);">Stock</h6>
+                        <h5>50kg</h5>
+                    </div>
+                    <hr>
+                    <div class="about">
+                        <h6 style="color: rgb(102, 102, 102);">About the Product</h6>
+                        <h5><b>Broccoli is a highly versatile vegetable, delicious raw or cooked: packed with so many complex nutrients that it's often called a superfood. Small green flower heads in an edible, thick, sturdy stalk.</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="product Red_Capsicum">
+                <img src="Red_Capsicum.jpg" width="150px" height="140px">
+                <div class="content">
+                    <button id="AddtoCart"><b>ADD TO CART</b></button>
+                    <button id="Edit"><b>EDIT</b></button>
+                    <button id="Delete"><b>DELETE</b></button>
+                    <div class="details">
+                        <h4 id="Name">Red Capsicum</h4>
+                        <h6 id="weight"><b style="color: rgb(102, 102, 102);">200g</b></h6>
+                        <h5 id="price"><b>$1.60</b></h5>
+                        <h5 id="discount">Discount:3%</h5>
+                        <h5 id="brand">Brand:</h5>
+                        
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <hr>
+                    <div class="keyInfo">
+                        <h6 style="color: rgb(102, 102, 102);">Key Information</h6>
+                        <h5>Best Consumed within 6 days of delivery</h5>
+                    </div>
+                    <div class="Country">
+                        <h6 style="color: rgb(102, 102, 102);">Country of Origin</h6>
+                        <h5>Latin America</h5>
+                    </div>
+                    <hr>
+            
+                    <div class="price_details">
+                        <h6 style="color: rgb(102, 102, 102);">Wholesale Price</h6>
+                        <h5>$1.25</h5>
+
+                        <h6 style="color: rgb(102, 102, 102);">Dealer Price</h6>
+                        <h5>$1.00</h5>
+                    </div>
+                    <hr>
+            
+                    <div class="product_details">
+                        <h6 style="color: rgb(102, 102, 102);">Product code</h6>
+                        <h5>A02</h5>
+
+                        <h6 style="color: rgb(102, 102, 102);">Product Category</h6>
+                        <h5>Fruits</h5>
+                    </div>
+                    <hr>
+                    
+                    <div class="stock">
+                        <h6 style="color: rgb(102, 102, 102);">Stock</h6>
+                        <h5>45kg</h5>
+                    </div>
+                    
+                    
+                    <hr>
+                    <div class="about">
+                        <h6 style="color: rgb(102, 102, 102);">About the Product</h6>
+                        <h5><b>Capsicum may help in managing blood glucose, dyslipidemia, cancers, and healing wounds. Additionally, it may help in boosting immunity, metabolism, preventing cataracts, and may provide symptomatic relief in arthritis, Crohn's disease and yellow fever.</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="product Organic_Fresh_Banana">
+                <img src="banana.jpg" width="150px" height="140px">
+                <div class="content">
+                    <button id="AddtoCart"><b>ADD TO CART</b></button>
+                    <button id="Edit"><b>EDIT</b></button>
+                    <button id="Delete"><b>DELETE</b></button>
+                    <div class="details">
+                        <h4 id="Name">Organic Fresh Banana</h4>
+                        <h6 id="weight"><b style="color: rgb(102, 102, 102);">500g</b></h6>
+                        <h5 id="price"><b>$1.85</b></h5>
+                        <h5 id="discount">Discount:9%</h5>
+                        <h5 id="brand">Brand:</h5>
+                        
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <hr>
+                    <div class="keyInfo">
+                        <h6 style="color: rgb(102, 102, 102);">Key Information</h6>
+                        <h5>Best Consumed within 6 days of delivery</h5>
+                    </div>
+                    <div class="Country">
+                        <h6 style="color: rgb(102, 102, 102);">Country of Origin</h6>
+                        <h5>India</h5>
+                    </div>
+                    <hr>
+
+                    <div class="price_details">
+                        <h6 style="color: rgb(102, 102, 102);">Wholesale Price</h6>
+                        <h5>$1.20</h5>
+
+                        <h6 style="color: rgb(102, 102, 102);">Dealer Price</h6>
+                        <h5>$1.00</h5>
+                    </div>
+                    <hr>
+
+                    <div class="product_details">
+                        <h6 style="color: rgb(102, 102, 102);">Product code</h6>
+                        <h5>A03</h5>
+
+                        <h6 style="color: rgb(102, 102, 102);">Product Category</h6>
+                        <h5>Fruits</h5>
+                    </div>
+                    <hr>
+                    
+                    <div class="stock">
+                        <h6 style="color: rgb(102, 102, 102);">Stock</h6>
+                        <h5>28kg</h5>
+                    </div>
+                    <hr>
+                    <div class="about">
+                        <h6 style="color: rgb(102, 102, 102);">About the Product</h6>
+                        <h5><b>It is a good source of Vitamin B6, Vitamin C, and Potassium, as well as containing dietary fiber and Magnesium. It helps you keep your immune system healthy and is required for the synthesis of neurotransmitters such as serotonin.</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="product Gala_Apple">
+                <img src="Gala Apples.jpg" width="150px" height="140px">
+                <div class="content">
+                    <button id="AddtoCart"><b>ADD TO CART</b></button>
+                    <button id="Edit"><b>EDIT</b></button>
+                    <button id="Delete"><b>DELETE</b></button>
+                    <div class="details">
+                        <h4 id="Name">Gala Apple</h4>
+                        <h6 id="weight"><b style="color: rgb(102, 102, 102);">6 Pack</b></h6>
+                        <h5 id="price"><b>$1.70</b></h5>
+                        <h5 id="discount">Discount:6%</h5>
+                        <h5 id="brand">Brand:</h5>
+                        
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <hr>
+                    <div class="keyInfo">
+                        <h6 style="color: rgb(102, 102, 102);">Key Information</h6>
+                        <h5>Best Consumed within 6 days of delivery</h5>
+                    </div>
+                    <div class="Country">
+                        <h6 style="color: rgb(102, 102, 102);">Country of Origin</h6>
+                        <h5>USA</h5>
+                    </div>
+                    <hr>
+
+                    <div class="price_details">
+                        <h6 style="color: rgb(102, 102, 102);">Wholesale Price</h6>
+                        <h5>$1.20</h5>
+
+                        <h6 style="color: rgb(102, 102, 102);">Dealer Price</h6>
+                        <h5>$1.00</h5>
+                    </div>
+                    <hr>
+                    
+                    <div class="product_details">
+                        <h6 style="color: rgb(102, 102, 102);">Product code</h6>
+                        <h5>A04</h5>
+
+                        <h6 style="color: rgb(102, 102, 102);">Product Category</h6>
+                        <h5>Fruits</h5>
+                    </div>
+                    <hr>
+                    
+                    <div class="stock">
+                        <h6 style="color: rgb(102, 102, 102);">Stock</h6>
+                        <h5>47kg</h5>
+                    </div>
+                    
+                    <hr>
+                    <div class="about">
+                        <h6 style="color: rgb(102, 102, 102);">About the Product</h6>
+                        <h5><b>Gala apples are a good source of fiber, including pectin, which may help maintain normal cholesterol levels. They also contain vitamin C and other antioxidants, which can help protect cells from damage. The potassium in apples helps maintain normal blood pressure, and their flavonoids are linked to reduced risk of heart disease.</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="product Valencia_Orange">
+                <img src="Valencia Orange.jpg" width="150px" height="140px">
+                <div class="content">
+                    <button id="AddtoCart"><b>ADD TO CART</b></button>
+                    <button id="Edit"><b>EDIT</b></button>
+                    <button id="Delete"><b>DELETE</b></button>
+                    <div class="details">
+                        <h4 id="Name">Valencia Orange</h4>
+                        <h6 id="weight"><b style="color: rgb(102, 102, 102);">3 Pack</b></h6>
+                        <h5 id="price"><b>$2.00</b></h5>
+                        <h5 id="discount">Discount:4%</h5>
+                        <h5 id="brand">Brand:</h5>
+                        
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <hr>
+                    <div class="keyInfo">
+                        <h6 style="color: rgb(102, 102, 102);">Key Information</h6>
+                        <h5>Best Consumed within 6 days of delivery</h5>
+                    </div>
+                    <div class="Country">
+                        <h6 style="color: rgb(102, 102, 102);">Country of Origin</h6>
+                        <h5>Spain</h5>
+                    </div>
+                    <hr>
+
+                    <div class="price_details">
+                        <h6 style="color: rgb(102, 102, 102);">Wholesale Price</h6>
+                        <h5>$1.60</h5>
+
+                        <h6 style="color: rgb(102, 102, 102);">Dealer Price</h6>
+                        <h5>$1.00</h5>
+                    </div>
+                    <hr>
+                    
+                    <div class="product_details">
+                        <h6 style="color: rgb(102, 102, 102);">Product code</h6>
+                        <h5>A06</h5>
+
+                        <h6 style="color: rgb(102, 102, 102);">Product Category</h6>
+                        <h5>Fruits</h5>
+                    </div>
+                    <hr>
+                    
+                    <div class="stock">
+                        <h6 style="color: rgb(102, 102, 102);">Stock</h6>
+                        <h5>70kg</h5>
+                    </div>
+
+                    
+                    <hr>
+                    <div class="about">
+                        <h6 style="color: rgb(102, 102, 102);">About the Product</h6>
+                        <h5><b>Valencia Oranges are known for their sweet taste and juiciness. They are a good source of vitamin C, fiber, and antioxidants. These nutrients are vital for boosting the immune system, improving digestion, and reducing the risk of chronic diseases.</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="product Organic_Avocados">
+                <img src="Organic Avagoda.webp" width="150px" height="140px">
+                <div class="content">
+                    <button id="AddtoCart"><b>ADD TO CART</b></button>
+                    <button id="Edit"><b>EDIT</b></button>
+                    <button id="Delete"><b>DELETE</b></button>
+                    <div class="details">
+                        <h4 id="Name">Organic Avocados</h4>
+                        <h6 id="weight"><b style="color: rgb(102, 102, 102);">4 Pack</b></h6>
+                        <h5 id="price"><b>$4.50</b></h5>
+                        <h5 id="discount">Discount:2%</h5>
+                        <h5 id="brand">Brand:</h5>
+                        
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <hr>
+                    <div class="keyInfo">
+                        <h6 style="color: rgb(102, 102, 102);">Key Information</h6>
+                        <h5>Best Consumed within 6 days of delivery</h5>
+                    </div>
+                    <div class="Country">
+                        <h6 style="color: rgb(102, 102, 102);">Country of Origin</h6>
+                        <h5>Mexico</h5>
+                    </div>
+                    <hr>
+
+                    <div class="price_details">
+                        <h6 style="color: rgb(102, 102, 102);">Wholesale Price</h6>
+                        <h5>$3.50</h5>
+
+                        <h6 style="color: rgb(102, 102, 102);">Dealer Price</h6>
+                        <h5>$2.00</h5>
+                    </div>
+                    <hr>
+                   
+                    <div class="product_details">
+                        <h6 style="color: rgb(102, 102, 102);">Product code</h6>
+                        <h5>A06</h5>
+
+                        <h6 style="color: rgb(102, 102, 102);">Product Category</h6>
+                        <h5>Fruits</h5>
+                    </div>
+                    <hr>
+                    
+                    <div class="stock">
+                        <h6 style="color: rgb(102, 102, 102);">Stock</h6>
+                        <h5>60kg</h5>
+                    </div>
+
+                    <hr>
+                    <div class="about">
+                        <h6 style="color: rgb(102, 102, 102);">About the Product</h6>
+                        <h5><b>Avocados are incredibly nutritious and contain a wide variety of nutrients, including 20 different vitamins and minerals. They are also high in healthy fats, fiber, and antioxidants that can support heart health, improve digestion, and enhance nutrient absorption from other foods.</b></h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="blur-background" class="blur-background">
+    <form id="product-form">
+        <header id="form_heading">
+            <b>Add Product</b>
+            <button id="close-form" style="float: right;">X</button>
+        </header>
+        <div id="formcontent">
+            <br>
+            <input type="text" id="productName" placeholder="Product Name*" required>
+            <select id="productCategory" required>
+                <option value="Product Category" disabled selected>Product Category*</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Vegetable">Vegetable</option>
+                <option value="Dry_Fruits">Dry Fruits</option>
+            </select>
+            <input type="text" id="brand" placeholder="Brand">
+            <input type="text" id="productCode" placeholder="Product Code*" required>
+            <div class="twoinrow">
+                <input type="text" id="stock" placeholder="Stock*" required>
+                <select id="unit" required>
+                    <option value="Unit" disabled selected>Unit*</option>
+                    <option value="kg">Kilogram (kg)</option>
+                    <option value="g">Gram (g)</option>
+                    <option value="lbs">Pounds (lbs)</option>
+                    <option value="oz">Ounce (oz)</option>
+                </select>
+            </div>
+            <div class="twoinrow">
+                <input type="text" id="salePrice" placeholder="Sale Price*" required>
+                <input type="text" id="Discount" placeholder="Discount*">
+            </div>
+            <div class="twoinrow">
+                <input type="text" id="wholesalePrice" placeholder="Wholesale Price">
+                <input type="text" id="dealerPrice" placeholder="Dealer Price">
+            </div>
+            <input type="text" id="manufacturer" placeholder="Manufacturer">
+            <input type="text" id="key_Information" placeholder="Key Information*" required>
+            <input type="text" id="AboutProduct" placeholder="About the Product*" required>
+
+            <div id="photo">
+                <img id="dummy-photo" src="dummy_photo.jpg" alt="photo to upload" onclick="document.getElementById('file-input').click();">
+                <input type="file" id="file-input" style="display: none;" onchange="previewPhoto(event)">
+            </div>
+            <input id="close-form" type="submit" value="Save & Publish">
+        </div>
+    </form>
+</div>
+
+    <script>
+          // Function to preview selected photo
+function previewPhoto(event) {
+    var reader = new FileReader();
+    reader.onload = function() {
+        var output = document.getElementById('dummy-photo');
+        output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+}
+
+// Show product form and background overlay on "New Product" button click
+document.getElementById('addnewitem').addEventListener('click', function () {
+    document.getElementById('product-form').style.display = 'block';
+    document.getElementById('blur-background').style.display = 'flex';
+    // Reset form and clear any existing product reference
+    document.getElementById('product-form').reset();
+    document.getElementById('dummy-photo').src = 'dummy_photo.jpg';
+    document.getElementById('product-form').dataset.editing = '';
+});
+
+// Close product form and background overlay on "X" button click
+document.getElementById('close-form').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('product-form').style.display = 'none';
+    document.getElementById('blur-background').style.display = 'none';
+});
+
+// Handle form submission for adding or editing products
+document.getElementById('product-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    handleFormSubmit();
+});
+
+// Function to handle form submission for adding or editing products
+function handleFormSubmit() {
+    // Fetch form values
+    var productName = document.getElementById('productName').value;
+    var productCategory = document.getElementById('productCategory').value.replace(/\s/g, '_');
+    var brand = document.getElementById('brand').value;
+    var productCode = document.getElementById('productCode').value;
+    var stock = document.getElementById('stock').value;
+    var unit = document.getElementById('unit').value;
+    var salePrice = document.getElementById('salePrice').value;
+    var discount = document.getElementById('Discount').value;
+    var wholesalePrice = document.getElementById('wholesalePrice').value;
+    var dealerPrice = document.getElementById('dealerPrice').value;
+    var manufacturer = document.getElementById('manufacturer').value;
+    var keyInformation = document.getElementById('key_Information').value;
+    var aboutProduct = document.getElementById('AboutProduct').value;
+    var photo = document.getElementById('dummy-photo').src;
+
+    // Check if we are editing an existing product
+    var editingProduct = document.getElementById('product-form').dataset.editing;
+    if (editingProduct) {
+        // Update existing product
+        var productElement = document.querySelector(`[data-id='${editingProduct}']`);
+        productElement.querySelector('img').src = photo;
+        productElement.querySelector('#Name').textContent = productName;
+        productElement.querySelector('#weight').innerHTML = `<b style="color: rgb(102, 102, 102);">${stock} ${unit}</b>`;
+        productElement.querySelector('#price').innerHTML = `<b>$${salePrice}</b>`;
+        productElement.querySelector('#discount').textContent = `Discount: ${discount}`;
+        productElement.querySelector('#brand').textContent = `Brand: ${brand}`;
+        productElement.querySelector('.keyInfo h5').textContent = keyInformation;
+        productElement.querySelector('.Country h5').textContent = manufacturer;
+        productElement.querySelector('.price_details h5').textContent = `$${wholesalePrice}`;
+        productElement.querySelector('.price_details h5:nth-child(4)').textContent = `$${dealerPrice}`;
+        productElement.querySelector('.product_details h5').textContent = productCode;
+        productElement.querySelector('.product_details h5:nth-child(4)').textContent = productCategory;
+        productElement.querySelector('.stock h5').textContent = stock;
+        productElement.querySelector('.about h5').textContent = aboutProduct;
+
+        // Update product data
+        productElement.productData = {
+            productName,
+            productCategory,
+            brand,
+            productCode,
+            stock,
+            unit,
+            salePrice,
+            discount,
+            wholesalePrice,
+            dealerPrice,
+            manufacturer,
+            keyInformation,
+            aboutProduct,
+            photo
+        };
+    } else {
+        // Create new product element
+        var newProduct = document.createElement('div');
+        newProduct.className = 'product ' + productCategory;
+        var productId = 'product_' + Date.now();
+        newProduct.setAttribute('data-id', productId);
+        newProduct.innerHTML = `
+            <img src="${photo}" width="150px" height="140px">
+            <div class="content">
+                <button id="AddtoCart"><b>ADD TO CART</b></button>
+                <button id="Edit"><b>EDIT</b></button>
+                <button id="Delete"><b>DELETE</b></button>
+                <div class="details">
+                    <h4 id="Name">${productName}</h4>
+                    <h6 id="weight"><b style="color: rgb(102, 102, 102);">${stock} ${unit}</b></h6>
+                    <h5 id="price"><b>$${salePrice}</b></h5>
+                    <h5 id="discount">Discount: ${discount}</h5>
+                    <h5 id="brand">Brand: ${brand}</h5>
+                </div>
+            </div>
+            <div class="dropdown">
+                <hr>
+                <div class="keyInfo">
+                    <h6 style="color: rgb(102, 102, 102);">Key Information</h6>
+                    <h5>${keyInformation}</h5>
+                </div>
+                <div class="Country">
+                    <h6 style="color: rgb(102, 102, 102);">Country of Origin</h6>
+                    <h5>${manufacturer}</h5>
+                </div>
+                <hr>
+                <div class="price_details">
+                    <h6 style="color: rgb(102, 102, 102);">Wholesale Price</h6>
+                    <h5>$${wholesalePrice}</h5>
+                    <h6 style="color: rgb(102, 102, 102);">Dealer Price</h6>
+                    <h5>$${dealerPrice}</h5>
+                </div>
+                <hr>
+                <div class="product_details">
+                    <h6 style="color: rgb(102, 102, 102);">Product code</h6>
+                    <h5>${productCode}</h5>
+                    <h6 style="color: rgb(102, 102, 102);">Product Category</h6>
+                    <h5>${productCategory}</h5>
+                </div>
+                <hr>
+                <div class="stock">
+                    <h6 style="color: rgb(102, 102, 102);">Stock</h6>
+                    <h5>${stock}</h5>
+                </div>
+                <hr>
+                <div class="about">
+                    <h6 style="color: rgb(102, 102, 102);">About the Product</h6>
+                    <h5><b>${aboutProduct}</b></h5>
+                </div>
+            </div>
+        `;
+
+        // Store product data in the element
+        newProduct.productData = {
+            productName,
+            productCategory,
+            brand,
+            productCode,
+            stock,
+            unit,
+            salePrice,
+            discount,
+            wholesalePrice,
+            dealerPrice,
+            manufacturer,
+            keyInformation,
+            aboutProduct,
+            photo
+        };
+
+        // Add event listeners for the Edit and Delete buttons
+        newProduct.querySelector('#Edit').addEventListener('click', function() {
+            editProduct(newProduct);
+        });
+
+        newProduct.querySelector('#Delete').addEventListener('click', function() {
+            deleteProduct(newProduct);
+        });
+
+        // Append new product to the product list
+        document.getElementById('product-list').appendChild(newProduct);
+    }
+
+    // Reset form fields and photo preview
+    document.getElementById('product-form').reset();
+    document.getElementById('dummy-photo').src = 'dummy_photo.jpg';
+
+    // Hide form and background overlay after submission
+    document.getElementById('product-form').style.display = 'none';
+    document.getElementById('blur-background').style.display = 'none';
+}
+
+// Function to edit product
+function editProduct(productElement) {
+    var data = productElement.productData;
+
+    document.getElementById('productName').value = data.productName;
+    document.getElementById('productCategory').value = data.productCategory.replace(/_/g, ' ');
+    document.getElementById('brand').value = data.brand;
+    document.getElementById('productCode').value = data.productCode;
+    document.getElementById('stock').value = data.stock;
+    document.getElementById('unit').value = data.unit;
+    document.getElementById('salePrice').value = data.salePrice;
+    document.getElementById('Discount').value = data.discount;
+    document.getElementById('wholesalePrice').value = data.wholesalePrice;
+    document.getElementById('dealerPrice').value = data.dealerPrice;
+    document.getElementById('manufacturer').value = data.manufacturer;
+    document.getElementById('key_Information').value = data.keyInformation;
+    document.getElementById('AboutProduct').value = data.aboutProduct;
+    document.getElementById('dummy-photo').src = data.photo;
+
+    document.getElementById('product-form').style.display = 'block';
+    document.getElementById('blur-background').style.display = 'flex';
+
+    // Set the editing flag with the product ID
+    document.getElementById('product-form').dataset.editing = productElement.getAttribute('data-id');
+}
+
+// Function to delete product
+function deleteProduct(productElement) {
+    productElement.remove();
+}
+
+
+
+
+// Add event listeners to existing products on page load
+document.querySelectorAll('.product').forEach(productElement => {
+    productElement.querySelector('#Edit').addEventListener('click', function() {
+        editProduct(productElement);
+    });
+
+    productElement.querySelector('#Delete').addEventListener('click', function() {
+        deleteProduct(productElement);
+    });
+});
+
+      
+
+    </script>
+</body>
+
+</html>

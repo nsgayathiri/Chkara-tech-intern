@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-Commerce</title>
+        <style>
+          .product-grid
+           {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+           }
+
+           button{
+            background:lightgreen;
+           }
+           
+            img {
+             width: 60px;
+             height: 70px;
+             padding:10px;;
+             }
+             
+            #create_button {
+            margin-bottom: 20px;
+             }
+            /* discount */
+            #discount{
+                border: 1px groove black; 
+                display:flex;
+                align-items: center;
+                margin-bottom: 10px;
+                width: 450px; 
+                height: 100px; 
+            }
+                
+            #discount-info {
+                margin-left: 10px;
+                
+            }
+            /* Almond */
+            #Almond {
+                border: 1px groove black;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                width: 450px; 
+                height: 100px;
+            }
+                
+            #Almond_info {
+                margin-left: 10px;
+            }
+            /* anime_mug */
+            #anime-mug{
+                border: 1px groove black;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                width: 450px; 
+                height: 100px;
+            }
+                
+            #mug_info {
+                margin-left: 10px;
+            }
+            /* Apple */
+            #apple {
+                border: 1px groove black;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                width: 450px; 
+                height: 100px;
+
+            }
+                
+            #apple_info{
+                margin-left: 10px;
+            }
+            /* banana */
+            #banana {
+                border: 1px groove black;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                width: 450px; 
+                height: 100px;
+
+            }
+                
+            #banana_info {
+                margin-left: 10px;
+            }
+            /* Blueberry */
+            #blueberry {
+                border: 1px groove black;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                width: 450px; 
+                height: 100px;
+
+            }
+                
+            #blue-berry_info{
+                margin-left: 10px;
+            }
+            /* Butter */
+            #butter{
+                border: 1px groove black;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                width: 450px; 
+                height: 100px;
+
+            }
+                
+            #butter_info{
+                margin-left: 10px;
+            }
+            /* Cake_Decor */
+            #cake_decor {
+                border: 1px groove black;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                width: 450px; 
+                height: 100px;
+
+            }
+                
+            #decor_info{
+                margin-left: 10px;
+            }
+            /* CheeseCake */
+            #Cheesecake {
+                border: 1px groove black;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                width: 450px; 
+                height: 100px;
+ 
+            }
+                
+            #cheesecake_info{
+                margin-left: 10px;
+            }
+            .search input{
+              float: right;
+              padding: 6px;
+              border: 1px groove black;
+              width:40%;
+              margin-top: 8px;
+              margin-right: 16px;
+              font-size: 20px;
+            }
+            .nav a {
+              float:right;
+              color: black;
+              padding: 10px;
+              margin-top: 8px;
+              font-size: 20px;
+            }
+        </style>
+        
+        
+    </head>
+
+    <body>
+        <div class="search">
+            <input type="text" placeholder="Search..">
+        </div>
+        <h1>Products</h1>
+        <br>
+        <div class="nav">
+            <a href="#filter">Filter</a>
+            <a href="#groupby">Group By</a>
+            <a href="#fav">Favourites</a>
+          </div>
+          <br>
+        <button id="create_button">CREATE</button>
+        <div class="product-grid">
+        <section id="discount">
+            <img src="10-percent-discount.webp" width="60px" height="70px">
+            <div class="discount-info">
+            <b>10.0% discount on total amount</b>
+            <p>Price: $0.00</p>
+            </div>
+            
+        </section>
+        <section id="Almond">
+            <img src="almond.avif" width="60px" height="70px">
+            <div class="Almond_info">
+                <b>Almond</b>
+                <p> Price:$1.00</p>
+                <p>On hand: 0.00lb</p>
+            </div>
+
+        </section>
+        <section id="anime-mug" >
+            <img src="anime_mug.jpg" width="60px" height="70px">
+        <div class="mug_info">
+            <b>Anime Mug</b>
+            <p>Price:$ 9.99</p>
+            <p>On hand: 0.00 Units</p>
+        </div>
+        </section>
+        <section id="apple">
+            <img src="apple.webp" width="60px" height="70px">
+        <div class="apple_info">
+            <b>Apple</b>
+            <p>Price: $ 1.00</p>
+            <p> On hand:0.00 lb</p>
+        </div>
+        </section>
+        <section id="banana">
+            <img src="banana.jpg" width="60px" height="70px">
+            <div class="banana_info">
+            <b>Banana</b>
+            <p>Price: $1.00</p>
+            <p>On hand:0.00 lb</p>
+            </div>
+        </section>
+        <section id="blueberry">
+            <img src="blueberry.jpg" width="60px" height="70px">
+            <div class="blue-berry_info">
+            <b>blueberry</b>
+            <p>Price: $1.00</p>
+            <p>On hand:0.00 lb</p>
+            </div>
+        </section>
+        <section id="butter">
+            <img src="butter.jpg"   width="60px" height="70px">
+            <div class="butter_info">
+            <b>butter</b>
+            <p>Price: $1.00</p>
+            <p>On hand:20.00lb</p>
+            </div>
+        </section>
+        <section id="cake_decor">
+            <img src="cake.jpg"  width="60px" height="70px">
+            <div class="decor_info">
+            <b>Cake Decorating Supplies</b>
+            <p>Price: $100.00</p>
+            <p>On hand:0.00 Units</p>
+            </div>
+        </section>
+        <section id="Cheesecake">
+            <img src="cheesecake.jpg" width="60px" height="70px">
+            <div class="cheesecake_info">
+            <b>Cheesecake</b>
+            <p>Price: $1.00</p>
+            </div>
+        </section>
+    </div>
+
+
+    </body>
+</html>
