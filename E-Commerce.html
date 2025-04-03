@@ -30,16 +30,6 @@
             overflow: hidden;
             position: relative;
         }
-
-        .Brocolli,
-        .Red_Capsicum,
-        .Organic_Fresh_Banana,
-        .Gala_Apple,
-        .Valencia_Orange,
-        .Organic_Avocados {
-            border-bottom: none;
-        }
-
         img {
             float: left;
             width: 90px;
@@ -58,6 +48,14 @@
             color: rgb(52, 120, 157);
             background: #ece8e8;
             border: none;
+        }
+        .Brocolli,
+        .Red_Capsicum,
+        .Organic_Fresh_Banana,
+        .Gala_Apple,
+        .Valencia_Orange,
+        .Organic_Avocados {
+            border-bottom: none;
         }
         button#AddtoCart:hover,
         button#Edit:hover,
@@ -113,6 +111,10 @@
         }
 
         .product:hover .dropdown {
+            display: block;
+        }
+        .product-list:hover .dropdown
+        {
             display: block;
         }
 
@@ -282,11 +284,12 @@
         }
     </style>
 
+
 </head>
 
 <body>
     <header id="heading">
-        <h2>Fresh Produce</h2>
+        <h2>Fresh Product</h2>
         <h5 style="color: rgb(102, 102, 102);">14 Products</h5>
         <b><button id="addnewitem">New Product</button></b>
         <br>
@@ -294,7 +297,7 @@
     <div id="container">
         <section id="product-list">
             <div class="product Brocolli">
-                <img src="broccoli.webp" width="150px" height="140px">
+                <img src="images/broccoli.webp" width="150px" height="140px">
                 <div class="content">
                         <button id="AddtoCart"><b>ADD TO CART</b></button>
                         <button id="Edit"><b>EDIT</b></button>
@@ -304,7 +307,7 @@
                         <h6 id="weight"><b style="color: rgb(102, 102, 102);">300g</b></h6>
                         <h5 id="price"><b>$2.30</b></h5>
                         <h5 id="discount">Discount:5%</h5>
-                        <h5 id="brand">Brand:</h5>
+                        <h5 id="Brand">Brand:A</h5>
                     </div>
                 </div>
                 <div class="dropdown">
@@ -347,7 +350,7 @@
                 </div>
             </div>
             <div class="product Red_Capsicum">
-                <img src="Red_Capsicum.jpg" width="150px" height="140px">
+                <img src="images/Red_Capsicum.jpg" width="150px" height="140px">
                 <div class="content">
                     <button id="AddtoCart"><b>ADD TO CART</b></button>
                     <button id="Edit"><b>EDIT</b></button>
@@ -357,7 +360,7 @@
                         <h6 id="weight"><b style="color: rgb(102, 102, 102);">200g</b></h6>
                         <h5 id="price"><b>$1.60</b></h5>
                         <h5 id="discount">Discount:3%</h5>
-                        <h5 id="brand">Brand:</h5>
+                        <h5 id="Brand">Brand:B</h5>
                         
                     </div>
                 </div>
@@ -405,7 +408,7 @@
                 </div>
             </div>
             <div class="product Organic_Fresh_Banana">
-                <img src="banana.jpg" width="150px" height="140px">
+                <img src="images/banana.jpg" width="150px" height="140px">
                 <div class="content">
                     <button id="AddtoCart"><b>ADD TO CART</b></button>
                     <button id="Edit"><b>EDIT</b></button>
@@ -415,7 +418,7 @@
                         <h6 id="weight"><b style="color: rgb(102, 102, 102);">500g</b></h6>
                         <h5 id="price"><b>$1.85</b></h5>
                         <h5 id="discount">Discount:9%</h5>
-                        <h5 id="brand">Brand:</h5>
+                        <h5 id="Brand">Brand:C</h5>
                         
                     </div>
                 </div>
@@ -461,7 +464,7 @@
                 </div>
             </div>
             <div class="product Gala_Apple">
-                <img src="Gala Apples.jpg" width="150px" height="140px">
+                <img src="images/Gala Apples.jpg" width="150px" height="140px">
                 <div class="content">
                     <button id="AddtoCart"><b>ADD TO CART</b></button>
                     <button id="Edit"><b>EDIT</b></button>
@@ -471,7 +474,7 @@
                         <h6 id="weight"><b style="color: rgb(102, 102, 102);">6 Pack</b></h6>
                         <h5 id="price"><b>$1.70</b></h5>
                         <h5 id="discount">Discount:6%</h5>
-                        <h5 id="brand">Brand:</h5>
+                        <h5 id="Brand">Brand:D</h5>
                         
                     </div>
                 </div>
@@ -518,7 +521,7 @@
                 </div>
             </div>
             <div class="product Valencia_Orange">
-                <img src="Valencia Orange.jpg" width="150px" height="140px">
+                <img src="images/Valencia Orange.jpg" width="150px" height="140px">
                 <div class="content">
                     <button id="AddtoCart"><b>ADD TO CART</b></button>
                     <button id="Edit"><b>EDIT</b></button>
@@ -528,7 +531,7 @@
                         <h6 id="weight"><b style="color: rgb(102, 102, 102);">3 Pack</b></h6>
                         <h5 id="price"><b>$2.00</b></h5>
                         <h5 id="discount">Discount:4%</h5>
-                        <h5 id="brand">Brand:</h5>
+                        <h5 id="Brand">Brand:E</h5>
                         
                     </div>
                 </div>
@@ -576,7 +579,7 @@
                 </div>
             </div>
             <div class="product Organic_Avocados">
-                <img src="Organic Avagoda.webp" width="150px" height="140px">
+                <img src="images/Organic Avagoda.webp" width="150px" height="140px">
                 <div class="content">
                     <button id="AddtoCart"><b>ADD TO CART</b></button>
                     <button id="Edit"><b>EDIT</b></button>
@@ -586,7 +589,7 @@
                         <h6 id="weight"><b style="color: rgb(102, 102, 102);">4 Pack</b></h6>
                         <h5 id="price"><b>$4.50</b></h5>
                         <h5 id="discount">Discount:2%</h5>
-                        <h5 id="brand">Brand:</h5>
+                        <h5 id="Brand">Brand:F</h5>
                         
                     </div>
                 </div>
@@ -634,7 +637,8 @@
             </div>
         </section>
     </div>
-    <div id="blur-background" class="blur-background">
+
+<div id="blur-background" class="blur-background">
     <form id="product-form">
         <header id="form_heading">
             <b>Add Product</b>
@@ -649,7 +653,7 @@
                 <option value="Vegetable">Vegetable</option>
                 <option value="Dry_Fruits">Dry Fruits</option>
             </select>
-            <input type="text" id="brand" placeholder="Brand">
+            <input type="text" id="Brand" placeholder="Brand">
             <input type="text" id="productCode" placeholder="Product Code*" required>
             <div class="twoinrow">
                 <input type="text" id="stock" placeholder="Stock*" required>
@@ -681,241 +685,115 @@
         </div>
     </form>
 </div>
-
+    
     <script>
-          // Function to preview selected photo
-function previewPhoto(event) {
-    var reader = new FileReader();
-    reader.onload = function() {
-        var output = document.getElementById('dummy-photo');
-        output.src = reader.result;
-    };
-    reader.readAsDataURL(event.target.files[0]);
-}
+          function previewPhoto(event) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var output = document.getElementById('dummy-photo');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+        document.getElementById('addnewitem').addEventListener('click', function () {
+            document.getElementById('product-form').style.display = 'block';
+        });
 
-// Show product form and background overlay on "New Product" button click
-document.getElementById('addnewitem').addEventListener('click', function () {
-    document.getElementById('product-form').style.display = 'block';
-    document.getElementById('blur-background').style.display = 'flex';
-    // Reset form and clear any existing product reference
-    document.getElementById('product-form').reset();
-    document.getElementById('dummy-photo').src = 'dummy_photo.jpg';
-    document.getElementById('product-form').dataset.editing = '';
-});
+        document.getElementById('addnewitem').addEventListener('click', function() {
+        document.getElementById('blur-background').style.display = 'flex';
+        document.getElementById('product-form').style.display = 'block';
 
-// Close product form and background overlay on "X" button click
-document.getElementById('close-form').addEventListener('click', function(event) {
+        });
+
+        document.getElementById('close-form').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('blur-background').style.display = 'none';
+        document.getElementById('product-form').style.display = 'none';
+
+        });
+
+        document.getElementById('product-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('blur-background').style.display = 'none';
+        });
+
+    document.getElementById('product-form').addEventListener('submit', function (event) {
     event.preventDefault();
-    document.getElementById('product-form').style.display = 'none';
-    document.getElementById('blur-background').style.display = 'none';
-});
 
-// Handle form submission for adding or editing products
-document.getElementById('product-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    handleFormSubmit();
-});
-
-// Function to handle form submission for adding or editing products
-function handleFormSubmit() {
-    // Fetch form values
     var productName = document.getElementById('productName').value;
     var productCategory = document.getElementById('productCategory').value.replace(/\s/g, '_');
-    var brand = document.getElementById('brand').value;
+    var brand = document.getElementById('Brand').value;
     var productCode = document.getElementById('productCode').value;
-    var stock = document.getElementById('stock').value;
+    var stock = document.getElementById('stock').value;  
     var unit = document.getElementById('unit').value;
     var salePrice = document.getElementById('salePrice').value;
     var discount = document.getElementById('Discount').value;
     var wholesalePrice = document.getElementById('wholesalePrice').value;
     var dealerPrice = document.getElementById('dealerPrice').value;
     var manufacturer = document.getElementById('manufacturer').value;
-    var keyInformation = document.getElementById('key_Information').value;
-    var aboutProduct = document.getElementById('AboutProduct').value;
+    var keyInformation = document.getElementById('key_Information').value;  
+    var aboutProduct = document.getElementById('AboutProduct').value;  
     var photo = document.getElementById('dummy-photo').src;
 
-    // Check if we are editing an existing product
-    var editingProduct = document.getElementById('product-form').dataset.editing;
-    if (editingProduct) {
-        // Update existing product
-        var productElement = document.querySelector(`[data-id='${editingProduct}']`);
-        productElement.querySelector('img').src = photo;
-        productElement.querySelector('#Name').textContent = productName;
-        productElement.querySelector('#weight').innerHTML = `<b style="color: rgb(102, 102, 102);">${stock} ${unit}</b>`;
-        productElement.querySelector('#price').innerHTML = `<b>$${salePrice}</b>`;
-        productElement.querySelector('#discount').textContent = `Discount: ${discount}`;
-        productElement.querySelector('#brand').textContent = `Brand: ${brand}`;
-        productElement.querySelector('.keyInfo h5').textContent = keyInformation;
-        productElement.querySelector('.Country h5').textContent = manufacturer;
-        productElement.querySelector('.price_details h5').textContent = `$${wholesalePrice}`;
-        productElement.querySelector('.price_details h5:nth-child(4)').textContent = `$${dealerPrice}`;
-        productElement.querySelector('.product_details h5').textContent = productCode;
-        productElement.querySelector('.product_details h5:nth-child(4)').textContent = productCategory;
-        productElement.querySelector('.stock h5').textContent = stock;
-        productElement.querySelector('.about h5').textContent = aboutProduct;
-
-        // Update product data
-        productElement.productData = {
-            productName,
-            productCategory,
-            brand,
-            productCode,
-            stock,
-            unit,
-            salePrice,
-            discount,
-            wholesalePrice,
-            dealerPrice,
-            manufacturer,
-            keyInformation,
-            aboutProduct,
-            photo
-        };
-    } else {
-        // Create new product element
-        var newProduct = document.createElement('div');
-        newProduct.className = 'product ' + productCategory;
-        var productId = 'product_' + Date.now();
-        newProduct.setAttribute('data-id', productId);
-        newProduct.innerHTML = `
-            <img src="${photo}" width="150px" height="140px">
-            <div class="content">
-                <button id="AddtoCart"><b>ADD TO CART</b></button>
-                <button id="Edit"><b>EDIT</b></button>
-                <button id="Delete"><b>DELETE</b></button>
-                <div class="details">
-                    <h4 id="Name">${productName}</h4>
-                    <h6 id="weight"><b style="color: rgb(102, 102, 102);">${stock} ${unit}</b></h6>
-                    <h5 id="price"><b>$${salePrice}</b></h5>
-                    <h5 id="discount">Discount: ${discount}</h5>
-                    <h5 id="brand">Brand: ${brand}</h5>
-                </div>
+    var newProduct = document.createElement('div');
+    newProduct.className = 'product ' + productCategory;
+    newProduct.innerHTML = `
+        <img src="${photo}" width="150px" height="140px">
+        <div class="content">
+            <button id="AddtoCart"><b>ADD TO CART</b></button>
+            <button id="Edit"><b>EDIT</b></button>
+            <button id="Delete"><b>DELETE</b></button>
+            <div class="details">
+                <h4 id="Name">${productName}</h4>
+                <h6 id="weight"><b style="color: rgb(102, 102, 102);">${stock} ${unit}</b></h6>
+                <h5 id="price"><b>$${salePrice}</b></h5>
+                <h5 id="discount">Discount: ${discount}</h5>
+                <h5 id="brand">Brand: ${brand}</h5>
             </div>
-            <div class="dropdown">
-                <hr>
-                <div class="keyInfo">
-                    <h6 style="color: rgb(102, 102, 102);">Key Information</h6>
-                    <h5>${keyInformation}</h5>
-                </div>
-                <div class="Country">
-                    <h6 style="color: rgb(102, 102, 102);">Country of Origin</h6>
-                    <h5>${manufacturer}</h5>
-                </div>
-                <hr>
-                <div class="price_details">
-                    <h6 style="color: rgb(102, 102, 102);">Wholesale Price</h6>
-                    <h5>$${wholesalePrice}</h5>
-                    <h6 style="color: rgb(102, 102, 102);">Dealer Price</h6>
-                    <h5>$${dealerPrice}</h5>
-                </div>
-                <hr>
-                <div class="product_details">
-                    <h6 style="color: rgb(102, 102, 102);">Product code</h6>
-                    <h5>${productCode}</h5>
-                    <h6 style="color: rgb(102, 102, 102);">Product Category</h6>
-                    <h5>${productCategory}</h5>
-                </div>
-                <hr>
-                <div class="stock">
-                    <h6 style="color: rgb(102, 102, 102);">Stock</h6>
-                    <h5>${stock}</h5>
-                </div>
-                <hr>
-                <div class="about">
-                    <h6 style="color: rgb(102, 102, 102);">About the Product</h6>
-                    <h5><b>${aboutProduct}</b></h5>
-                </div>
+        </div>
+        <div class="dropdown">
+            <hr>
+            <div class="keyInfo">
+                <h6 style="color: rgb(102, 102, 102);">Key Information</h6>
+                <h5>${keyInformation}</h5>
             </div>
-        `;
-
-        // Store product data in the element
-        newProduct.productData = {
-            productName,
-            productCategory,
-            brand,
-            productCode,
-            stock,
-            unit,
-            salePrice,
-            discount,
-            wholesalePrice,
-            dealerPrice,
-            manufacturer,
-            keyInformation,
-            aboutProduct,
-            photo
-        };
-
-        // Add event listeners for the Edit and Delete buttons
-        newProduct.querySelector('#Edit').addEventListener('click', function() {
-            editProduct(newProduct);
-        });
-
-        newProduct.querySelector('#Delete').addEventListener('click', function() {
-            deleteProduct(newProduct);
-        });
-
-        // Append new product to the product list
-        document.getElementById('product-list').appendChild(newProduct);
-    }
-
-    // Reset form fields and photo preview
+            <div class="Country">
+                <h6 style="color: rgb(102, 102, 102);">Country of Origin</h6>
+                <h5>${manufacturer}</h5>
+            </div>
+            <hr>
+            <div class="price_details">
+                <h6 style="color: rgb(102, 102, 102);">Wholesale Price</h6>
+                <h5>$${wholesalePrice}</h5>
+                <h6 style="color: rgb(102, 102, 102);">Dealer Price</h6>
+                <h5>$${dealerPrice}</h5>
+            </div>
+            <hr>
+            <div class="product_details">
+                <h6 style="color: rgb(102, 102, 102);">Product code</h6>
+                <h5>${productCode}</h5>
+                <h6 style="color: rgb(102, 102, 102);">Product Category</h6>
+                <h5>${productCategory}</h5>
+            </div>
+            <hr>
+            <div class="stock">
+                <h6 style="color: rgb(102, 102, 102);">Stock</h6>
+                <h5>${stock}</h5>
+            </div>
+            <hr>
+            <div class="about">
+                <h6 style="color: rgb(102, 102, 102);">About the Product</h6>
+                <h5><b>${aboutProduct}</b></h5>
+            </div>
+        </div>
+    `;
+    document.getElementById('product-list').appendChild(newProduct);
+ 
     document.getElementById('product-form').reset();
     document.getElementById('dummy-photo').src = 'dummy_photo.jpg';
-
-    // Hide form and background overlay after submission
     document.getElementById('product-form').style.display = 'none';
-    document.getElementById('blur-background').style.display = 'none';
-}
-
-// Function to edit product
-function editProduct(productElement) {
-    var data = productElement.productData;
-
-    document.getElementById('productName').value = data.productName;
-    document.getElementById('productCategory').value = data.productCategory.replace(/_/g, ' ');
-    document.getElementById('brand').value = data.brand;
-    document.getElementById('productCode').value = data.productCode;
-    document.getElementById('stock').value = data.stock;
-    document.getElementById('unit').value = data.unit;
-    document.getElementById('salePrice').value = data.salePrice;
-    document.getElementById('Discount').value = data.discount;
-    document.getElementById('wholesalePrice').value = data.wholesalePrice;
-    document.getElementById('dealerPrice').value = data.dealerPrice;
-    document.getElementById('manufacturer').value = data.manufacturer;
-    document.getElementById('key_Information').value = data.keyInformation;
-    document.getElementById('AboutProduct').value = data.aboutProduct;
-    document.getElementById('dummy-photo').src = data.photo;
-
-    document.getElementById('product-form').style.display = 'block';
-    document.getElementById('blur-background').style.display = 'flex';
-
-    // Set the editing flag with the product ID
-    document.getElementById('product-form').dataset.editing = productElement.getAttribute('data-id');
-}
-
-// Function to delete product
-function deleteProduct(productElement) {
-    productElement.remove();
-}
-
-
-
-
-// Add event listeners to existing products on page load
-document.querySelectorAll('.product').forEach(productElement => {
-    productElement.querySelector('#Edit').addEventListener('click', function() {
-        editProduct(productElement);
-    });
-
-    productElement.querySelector('#Delete').addEventListener('click', function() {
-        deleteProduct(productElement);
-    });
-});
-
-      
-
-    </script>
+ });
+    </script> 
 </body>
 
 </html>
