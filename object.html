@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object in JavaScript</title>
+    </head>
+    <body>
+        <h1>Object in JavaScript</h1>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+    </body>
+    <script>
+        
+        let Student1 = {
+            Science: "A",
+            Maths: "B",
+            Social_Science: "C"
+        };
+        
+        let Student2 = {
+            Science: "X",
+            Maths: "Y",
+            Social_Science: "Z"
+        };
+
+        document.getElementById("demo1").innerHTML = Student1.Science + " " + Student1.Maths + " " + Student1.Social_Science;
+        document.getElementById("demo2").innerHTML = Student2.Science + " " + Student2.Maths + " " + Student2.Social_Science;
+
+    </script>
+</html>

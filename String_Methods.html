@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript String</h1>
+
+<p>The charAt() method returns the character at a given position in a string:</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<p id="demo11"></p>
+<p id="demo12"></p>
+<p id="demo13"></p>
+<p id="demo14"></p>
+<p id="demo15"></p>
+<p id="demo16"></p>
+<p id="demo17"></p>
+<p id="demo18"></p>
+<p id="demo19"></p>
+
+
+
+<script>
+var text = "HELLO WORLD";
+document.getElementById("demo1").innerHTML = text.charAt(0);
+document.getElementById("demo2").innerHTML = text.at(1);
+document.getElementById("demo3").innerHTML = text[2];
+document.getElementById("demo4").innerHTML = text.slice(3,7);
+document.getElementById("demo5").innerHTML = text.slice(7);
+document.getElementById("demo6").innerHTML = text.slice(-7);
+document.getElementById("demo7").innerHTML = text.toUpperCase();
+document.getElementById("demo8").innerHTML = text.toLowerCase();
+var text_2 = "       Helllloooo";
+document.getElementById("demo9").innerHTML = text_2.trim();
+
+var text_3 = "           Gayathiri       "
+document.getElementById("demo10").innerHTML = text_2.trim();
+
+var text_4 = "Hii";
+var text_5 = "How are you?";
+document.getElementById("demo11").innerHTML = text_4concat(" ",text_5);
+
+var text_6 = "8";
+document.getElementById("demo12").innerHTML = text_6.padStart(4,"0");
+document.getElementById("demo13").innerHTML = text_6.padEnd(4,"0");
+document.getElementById("demo14").innerHTML = text_6.repeat(4);
+
+
+
+
+</script>
+
+</body>
+</html>
+
