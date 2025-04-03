@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Escape Sequences in JavaScript</title>
+</head>
+<body>
+    <h1>Escape Sequences in JavaScript</h1>
+    <p id="result"></p>
+
+    <script>
+        let text = "";
+
+        text += "Backspace: " + "Hello\bWorld" + "<br>";
+        text += "Form Feed: " + "Hello\fWorld" + "<br>";
+        text += "New Line: " + "Hello\nWorld" + "<br>";
+        text += "Carriage Return: " + "Hello\rWorld" + "<br>";
+        text += "Horizontal Tabulator: " + "Hello\tWorld" + "<br>";
+        text += "Vertical Tabulator: " + "Hello\vWorld" + "<br>";
+
+        document.getElementById("result").innerHTML = text;
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings Search</h1>
+
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<p id="demo11"></p>
+
+
+
+<script>
+let text = "I love cats. Cats are very easy to love. Cats are very popular."
+
+document.getElementById("demo1").innerHTML = Array.from(text.matchAll("Cats"));
+document.getElementById("demo2").innerHTML = Array.from(text.matchAll(/Cats/g));
+document.getElementById("demo3").innerHTML = Array.from(text.matchAll(/Cats/gi));
+document.getElementById("demo4").innerHTML = text.includes("world");
+document.getElementById("demo5").innerHTML = text.includes("easy",34);
+document.getElementById("demo6").innerHTML = text.includes("easy", 27);
+document.getElementById("demo7").innerHTML = text.startsWith("I");
+document.getElementById("demo8").innerHTML = text.startsWith("love");
+document.getElementById("demo9").innerHTML = text.endsWith("popular.");
+document.getElementById("demo10").innerHTML = text.endsWith("popular");
+document.getElementById("demo11").innerHTML =text.lastIndexOf("love");
+
+</script>
+
+</body>
+</html>
